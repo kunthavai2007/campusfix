@@ -1,8 +1,7 @@
 /**
  * CampusFix AI Frontend API Client
  */
-
-const API_BASE = '/api';
+const API_BASE = `${import.meta.env.VITE_API_URL || 'https://campusfix-3fh7.onrender.com'}/api`;
 
 async function handleResponse(response) {
   const data = await response.json().catch(() => ({}));
